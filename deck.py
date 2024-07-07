@@ -17,3 +17,8 @@ class Deck:
             return None
 
         return card
+
+
+my_deck = []
+for card in Deck().cards:
+    print(card.get_card())

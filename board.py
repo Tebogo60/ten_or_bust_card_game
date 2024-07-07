@@ -1,7 +1,7 @@
 from deck import Deck
 
 
-class board:
+class Board:
     def __init__(self):
         self.deck = Deck()
         self.players = []
