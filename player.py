@@ -1,12 +1,18 @@
 class Player:
-    def __init__(self, name, cards):
+
+    def __init__(self, name):
         self.name = name
-        self.cards = cards
-        self.score = 0
+        self.hand = []
+        self.score = self.calculate_score(self.hand)
 
-    def update_score(self, points):
-        self.score += points
+    def draw_card(self, deck):
+        card = deck.draw_card()
+        return card
 
-    def add_cards(self, cards):
-        for card in cards:
-            self.cards.append(cards)
+    def calculate_score(self, hand):
+        score = 0
+
+        for card in hand:
+            score += card.value
+
+        return score
