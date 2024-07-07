@@ -1,4 +1,5 @@
 from board import *
+from player import *
 
 
 class Game:
@@ -23,5 +24,11 @@ class Game:
 
         return user_input
 
+    def create_players(self, number_of_players):
+        for _ in range(int(number_of_players)):
+            get_player_name = self.get_input("Enter your name:")
+            self.board.add_player(Player(get_player_name))
+
     def play(self):
-        number_of_players = self.get_input("Enter number of players")
+        number_of_players = self.get_input("Enter number of players:")
+        self.create_players(number_of_players)
