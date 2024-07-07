@@ -1,3 +1,5 @@
+import random
+
 from card import *
 
 
@@ -18,7 +20,10 @@ class Deck:
 
         return card
 
+    def shuffle(self):
+        random.shuffle(self.cards)
 
-my_deck = []
-for card in Deck().cards:
-    print(card.get_card())
+
+# my_deck = []
+# for card in Deck().cards:
+#     print(card.get_card())

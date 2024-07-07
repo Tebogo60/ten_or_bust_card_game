@@ -5,6 +5,7 @@ class Board:
     def __init__(self):
         self.deck = Deck()
         self.players = []
+        self.community_cards = []
 
     def add_player(self, player):
         self.players.append(player)
