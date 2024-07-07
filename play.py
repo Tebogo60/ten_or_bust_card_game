@@ -12,13 +12,7 @@ class Game:
         print(prompt)
         user_input = input(" - ")
 
-        while (
-            not user_input
-            or not user_input.isdigit()
-            and input_type == "integer"
-            or not user_input.isalpha()
-            and input_type == "string"
-        ):
+        while not user_input or not user_input.isdigit() and input_type == "integer":
             print(f"\n >>> Invalid input '{user_input}', expect '{input_type}'! <<<\n")
 
             print(prompt)
